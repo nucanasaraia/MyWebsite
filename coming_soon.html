@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coming Soon - Rom-Com Central</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e3e3e3;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+
+       
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+
+        .slider-wrapper .image-list{
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+  }
+  .slider-wrapper .image-list .image-item{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .scrolling-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .scrollcards{
+    position: relative;
+    max-width: 1200px;
+    width: 95%;
+    overflow: hidden;
+  }
+.scrollcard .slider-scrollbar{
+  height: 24px;
+  width: 100%;
+}
+.slider-scrollbar .scrollbar-track{
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+.slider-scrollbar:hover .scrollbar-track{
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: #0b0b0b;
+  border-radius: inherit;
+  cursor: grab;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+.left-chevron {
+  left: 10px; 
+  font-size: 1.5rem; 
+  z-index: 1; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+
+.right-chevron {
+  right: 10px; 
+  font-size: 1.5rem;
+  z-index: 1; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  color: white;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-list {
+  display: flex;
+  gap: 18px;
+  font-size: 0;
+  scrollbar-width: none;
+}
+
+.image-item {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.image-item {
+ width: 300px;
+ height: 500px;
+ object-fit: cover;
+ filter: brightness(70%); /* Add this line */
+ transition: filter 0.5s ease; /* Add this line for smooth transition */
+}
+
+.image-item:hover {
+ filter: brightness(100%); /* Add this block */
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollcards p{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Coming Soon - Rom-Com Central</h1>
+        <p>Get ready for these upcoming romantic comedies!</p>
+<nav>
+        <a href="index.html">Home</a>
+        <a href="films.html">Films</a>
+        <a href="coming_soon.html">Coming Soon</a>
+        <a href="about_us.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </header>
+
+    <section class="scrolling-cards">
+        <div class="scrollcards">
+        <span class="material-symbols-outlined left-chevron">
+            
+            </span>
+        <div class="slider-wrapper">
+        <div class="image-list">
+          <img src="wallbanger-cover.webp" alt="img-1" class="image-item"> 
+          <img src="ddddd.webp" alt="img-2" class="image-item">
+          <img src="MV5BMmY5N2ZlMjYtZTMwNC00ZTA4LWE4OWItMzNmMDE0N2I1OTI2XkEyXkFqcGdeQXVyNTMwOTA0OTA@._V1_.jpg" alt="img-3" class="image-item">
+          <img src="challengers-movie-metro-goldwyn-mayer-embed2.webp" alt="img-4" class="image-item">
+          <img src="the-idea-of-you01.webp" alt="img-5" class="image-item">
+          <img src="btw.jpg" alt="img-6" class="image-item">
+        </div>
+        <span class="material-symbols-outlined right-chevron">
+          
+          </span>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+          </div>
+        </div>
+        </div>
+        </section>
+
+    <section class="footer">
+        <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
+        <p>Designed with love by YourName</p>
+    </section>
+</body>
+
+</html>
