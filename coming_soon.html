@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Coming Soon - Rom-Com Central</title>
     <style>
-        /* Add your CSS styles here */
+    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,8 +13,13 @@
             background-color: #f9f9f9;
         }
 
+        header p {
+            color: #0b0b0b;
+            font-size: 17px;
+        }
+
         header {
-            background-color: #f7f7f7;
+            background: linear-gradient(to right, #b96363, #684890);
             padding: 20px;
             text-align: center;
         }
@@ -24,151 +29,92 @@
             justify-content: center;
             background-color: #e3e3e3;
             padding: 10px;
+            border: 5px solid rgb(255, 255, 255);
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #333333c7;
             margin: 0 15px;
+            color: black;
+            background-color: #ffffff57;
+            border: 1px solid rgba(255, 255, 255, 0.326);
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-weight: 500;
         }
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+img{
+    height: 500px;
+    width:350px;
+    border-radius: 3px;
+    transition: .5s;
+}
 
-       
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-
-        .slider-wrapper .image-list{
-    display: grid;
-    gap: 18px;
-    font-size: 0;
-    margin-bottom: 30px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    grid-template-columns: repeat(10, 1fr);
-  }
-  .slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
-  }
-  .slider-wrapper .image-list .image-item{
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-  }
-
-  .scrolling-cards{
+.container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  .scrollcards{
-    position: relative;
-    max-width: 1200px;
-    width: 95%;
+    justify-content: space-around;
+    background-color: whitesmoke;
+}
+.card{
+    height: 460px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
     overflow: hidden;
-  }
-.scrollcard .slider-scrollbar{
-  height: 24px;
-  width: 100%;
-}
-.slider-scrollbar .scrollbar-track{
-  height: 2px;
-  width: 100%;
-  background: #ccc;
-  position: relative;
-  border-radius: 4px;
-}
-.slider-scrollbar:hover .scrollbar-track{
-  height: 4px;
-}
-.slider-scrollbar .scrollbar-thumb{
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background: #0b0b0b;
-  border-radius: inherit;
-  cursor: grab;
-}
-.slider-scrollbar .scrollbar-thumb:active{
-  cursor: grabbing;
-  height: 8px;
-  top: -2px;
-}
-.slider-scrollbar .scrollbar-thumb::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
 }
 
-.left-chevron {
-  left: 10px; 
-  font-size: 1.5rem; 
-  z-index: 1; 
-  top: 50%; 
-  transform: translateY(-50%);
+.intro{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background: rgb(27,27,27, .5);
+    color: white;
+    bottom: 10px;
+    transition: .5s;
 }
 
-.right-chevron {
-  right: 10px; 
-  font-size: 1.5rem;
-  z-index: 1; 
-  top: 50%; 
-  transform: translateY(-50%); 
+
+h1{
+    margin: 10px;
+    font-size: 40px;
 }
 
-.material-symbols-outlined {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  color: white;
-  font-size: 2.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+p{
+    font-size: 20px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+span{
+    font-weight: bold;
 }
 
-.image-list {
-  display: flex;
-  gap: 18px;
-  font-size: 0;
-  scrollbar-width: none;
+.card:hover{
+    cursor: pointer;
+
 }
 
-.image-item {
-  width: 300px;
-  height: 500px;
-  object-fit: cover;
+.card:hover .intro{
+    height: 220px;
+    bottom: 240px;
+    background: rgb(41, 40, 40);
 }
 
-.image-item {
- width: 300px;
- height: 500px;
- object-fit: cover;
- filter: brightness(70%); /* Add this line */
- transition: filter 0.5s ease; /* Add this line for smooth transition */
+
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
 }
 
-.image-item:hover {
- filter: brightness(100%); /* Add this block */
+.card:hover img{
+    transform: scale(1.1);
 }
-
-.slider-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollcards p{
-  font-family: 'Poppins', sans-serif;
-  margin-left: 20px;
-}
-
     </style>
 </head>
 
@@ -176,45 +122,40 @@
     <header>
         <h1>Coming Soon - Rom-Com Central</h1>
         <p>Get ready for these upcoming romantic comedies!</p>
-<nav>
-        <a href="index.html">Home</a>
-        <a href="films.html">Films</a>
-        <a href="coming_soon.html">Coming Soon</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="films.html">Films</a>
+            <a href="coming_soon.html">Coming Soon</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
+<div class="container">
+    <div class="card">
+        <img src="ddddd.webp" alt="">
+        <div class="intro">
+            <h1>It Ends with Us</h1>
+<p>
+    Lily grapples with the complexities of love, past trauma, and the reappearance of her first love. <br>Release date: February 9, 2024</p>        
+</div>
+    </div>
+    <div class="card">
+        <img src="MV5BMmY5N2ZlMjYtZTMwNC00ZTA4LWE4OWItMzNmMDE0N2I1OTI2XkEyXkFqcGdeQXVyNTMwOTA0OTA@._V1_.jpg" alt="">
+        <div class="intro">
+            <h1>Irish Wish</h1>
+            <p>May your troubles be less, and your blessings be more, and nothing but happiness come through your door. <br>Initial release: 2024</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="anne-hathaway-looks-amazing-in-a-black-outfit-while-filming-a-scene-with-nicholas-galitzine-for-the-idea-of-you-in-savannah-georgia-201022_2.jpg" alt="">
+        <div class="intro">
+            <h1>The Idea of You</h1>
+            <p>An artist navigates the allure of a budding romance amidst the complications of her past. <br>Release date: May 2, 2024</p>
+        </div>
+    </div>
+   
+</div>
 
-    <section class="scrolling-cards">
-        <div class="scrollcards">
-        <span class="material-symbols-outlined left-chevron">
-            
-            </span>
-        <div class="slider-wrapper">
-        <div class="image-list">
-          <img src="wallbanger-cover.webp" alt="img-1" class="image-item"> 
-          <img src="ddddd.webp" alt="img-2" class="image-item">
-          <img src="MV5BMmY5N2ZlMjYtZTMwNC00ZTA4LWE4OWItMzNmMDE0N2I1OTI2XkEyXkFqcGdeQXVyNTMwOTA0OTA@._V1_.jpg" alt="img-3" class="image-item">
-          <img src="challengers-movie-metro-goldwyn-mayer-embed2.webp" alt="img-4" class="image-item">
-          <img src="the-idea-of-you01.webp" alt="img-5" class="image-item">
-          <img src="btw.jpg" alt="img-6" class="image-item">
-        </div>
-        <span class="material-symbols-outlined right-chevron">
-          
-          </span>
-        </div>
-        <div class="slider-scrollbar">
-          <div class="scrollbar-track">
-            <div class="scrollbar-thumb"></div>
-          </div>
-        </div>
-        </div>
-        </section>
-
-    <section class="footer">
-        <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
-        <p>Designed with love by YourName</p>
-    </section>
 </body>
 
 </html>
