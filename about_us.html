@@ -4,82 +4,183 @@
   <meta charset="UTF-8">
   <title>About Us - Rom-Com Central</title>
   <style>
+  body{
+    background: rgb(238, 230, 230);
+  }
+  .navbar ul li a {
+            color: black;
+            background-color: #4e4c4c57;
+            border: 1px solid rgba(186, 179, 179, 0.277);
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-weight: 500;
+        }
+
+        .text h1 {
+            color: rgb(255, 0, 0);
+            font-size: 35px;
+            position: relative;
+            top: -50px;
+            background: rgba(255, 255, 255, 0.274);
+        }
+
+        .header3 {
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+.navbar {
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.about-img img{
+  width: 650px;
+  border: 3px solid yellow;
+}
+    .about{
+      margin-top: 100px;
+      margin-bottom: 150px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 1.5em;
+    }
   
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+    .about-text{
+      position: relative;
+      left: -50px;
+      font-family: 'Montserrat', sans-serif;
     }
-    header {
-      background-color: #f7f7f7;
-      padding: 20px;
-      text-align: center;
+
+    .about-text h2{
+     font-size: 30px;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #e3e3e3;
-      padding: 10px;
+    .about-text span{
+      color: rgb(255, 165, 0);
     }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 15px;
+    .about-text p{
+      word-spacing: 5px;
+      line-height: 25px;
+      margin-bottom: 30px;
+      border: 2px solid rgb(155, 151, 151);
+      padding: 10px 10px;
     }
-    .about-container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .about-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-    }
+    
+.btn{
+  border: 1px solid rgb(255, 255, 0);
+  text-decoration: none;
+  background: rgb(252, 206, 0);
+  color: blue;
+  padding: 10px 10px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #888;
+    background: rgba(128, 128, 128, 0.185);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+  
   </style>
 </head>
 <body>
-    <header>
-        <h1>Coming Soon - Rom-Com Central</h1>
-        <p>Get ready for these upcoming romantic comedies!</p>
-<nav>
-        <a href="index.html">Home</a>
-        <a href="films.html">Films</a>
-        <a href="coming_soon.html">Coming Soon</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact.html">Contact</a>
+  <section class="header3">
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="coming_soon.html">Coming Soon</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    </header>
-  </header>
-  
-  <div class="about-container">
-    <div class="about-content">
-      <h2>Our Story</h2>
-      <p>Welcome to Rom-Com Central, your go-to place for all things romantic and comedic in the film world! Our journey began with a shared love for heartwarming stories, laughter, and the magic that comes with romantic comedies.</p>
-      <p>At Rom-Com Central, we strive to curate a collection of the best romantic comedies, share interesting insights, and create a community of rom-com enthusiasts.</p>
-    </div>
-    <div class="about-content">
-      <h2>Our Mission</h2>
-      <p>Our mission is to celebrate the joy of romantic comedies and provide a platform where fans can discover, discuss, and enjoy their favorite movies. We aim to bring smiles, laughter, and love through the movies we showcase.</p>
-    </div>
-    <div class="about-content">
-      <h2>Meet the Team</h2>
-      <p>At Rom-Com Central, our team is passionate about bringing you the best rom-com experience. From movie enthusiasts to tech wizards, our diverse team works tirelessly to make your visit to Rom-Com Central enjoyable and memorable.</p>
-      <!-- You can add team member profiles or descriptions here -->
-    </div>
-  </div>
 
-  <footer>
-    <p>&copy; 2024 Rom-Com Central. All rights reserved.</p>
-  </footer>
+<section class="about">
+<div class="about-img">
+   <img src="about-us-page-examples.png" alt="">
+</div>
+<div class="about-text">
+  <h2>About <span>Us</span></h2>
+  <h3>Where Love Meets Laughter</h3>
+  <p>Welcome to CiNeMa
+    rOmcOms, your ultimate destination for all things romantic comedy!
+
+    We're passionate about celebrating the joy, humor, and heartwarming moments found in rom-coms. Dive into our curated collection of timeless classics and latest releases, where we share reviews, articles, and behind-the-scenes insights that make these movies unforgettable.
+    
+    Join our community of rom-com enthusiasts! Connect, discuss, and relive your favorite scenes as we explore the magic of love and laughter together.
+    
+    Let's embrace the charm of rom-coms and let them brighten your day, one delightful moment at a time! <br>
+    With love and laughter,
+    <br>The CiNeMa
+    rOmcOms Team</p>
+    <a href="" class="btn">More About</a>
+</div>
+</section>
+<section class="footer">
+        <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
+        <p>Designed with love by YourName</p>
+    </section>
+</section>
 </body>
 </html>

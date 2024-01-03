@@ -117,7 +117,7 @@ nav i {
 .sentances{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(color-2174049_640.webp);
+    background-image: linear-gradient(rgba(149, 157, 193, 0.7), rgba(21, 32, 79, 0.7)), url(color-2174049_640.webp);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -141,7 +141,7 @@ nav i {
     top: 50px;
     left: 450px;
     transform: translate(-50%,-50%);
-    background-image: linear-gradient(rgb(0, 255, 102), rgb(0, 255, 34));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     background-size: 100% 10px;
     background-repeat: no-repeat;
     background-position: 100% 0%;
@@ -200,6 +200,7 @@ nav i {
 }
 
 .footer {
+    margin-top: 40px;
     padding: 20px 0;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -335,4 +336,109 @@ nav i {
     width: 100%;
     height: 100%;
 }
+
+.slider-wrapper .image-list{
+    display: grid;
+    gap: 18px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+  }
+  .slider-wrapper .image-list .image-item{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .scrolling-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .scrollcards{
+    position: relative;
+    max-width: 1200px;
+    width: 95%;
+    overflow: hidden;
+  }
+.scrollcard .slider-scrollbar{
+  height: 24px;
+  width: 100%;
+}
+.slider-scrollbar .scrollbar-track{
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+.slider-scrollbar:hover .scrollbar-track{
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: #514848;
+  border-radius: inherit;
+  cursor: grab;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  color: white;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-list {
+  display: flex;
+  gap: 18px;
+  font-size: 0;
+  scrollbar-width: none;
+}
+
+.image-item {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollcards p{
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #888;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
 

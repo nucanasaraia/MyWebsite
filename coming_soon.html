@@ -4,38 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Coming Soon - Rom-Com Central</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-    
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header p {
-            color: #0b0b0b;
-            font-size: 17px;
-        }
-
-        header {
-            background: linear-gradient(to right, #b96363, #684890);
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #e3e3e3;
-            padding: 10px;
-            border: 5px solid rgb(255, 255, 255);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333333c7;
-            margin: 0 15px;
+     .navbar ul li a {
             color: black;
             background-color: #ffffff57;
             border: 1px solid rgba(255, 255, 255, 0.326);
@@ -43,119 +14,448 @@
             padding: 5px 10px;
             font-weight: 500;
         }
+
+        .text h1 {
+            color: rgb(255, 0, 0);
+            font-size: 35px;
+            position: relative;
+            top: -50px;
+            background: rgba(255, 255, 255, 0.274);
+        }
+
+        .header3 {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(color-2174049_640.webp);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 50px;
+            background-image: url(ranger-4df6c1b6.png);
+            filter: brightness(80%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+.navbar {
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: aqua;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.text {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 40px;
+    color: white;
+    letter-spacing: 15px;
+}
+
+.text p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+
+hr{
+    width: 50%;
+    margin: 30px auto;
+    border: 1.5px solid #fff;
+}
+
 *{
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
-}
-img{
-    height: 500px;
-    width:350px;
-    border-radius: 3px;
-    transition: .5s;
+    box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    justify-content: space-around;
-    background-color: whitesmoke;
-}
+
 .card{
-    height: 460px;
-    margin: 50px;
-    box-shadow: 5px 5px 20px black;
+    position: relative;
+    left: 17px;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     overflow: hidden;
 }
 
-.intro{
-    height: 70px;
-    width: 350px;
-    padding: 6px;
-    box-sizing: border-box;
+.card .poster{
+    position: relative;
+    overflow: hidden;
+}
+
+.card .poster::before{
+    content: '';
     position: absolute;
-    background: rgb(27,27,27, .5);
-    color: white;
-    bottom: 10px;
-    transition: .5s;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #d28a1e 50%, transparent);
+    transition: 0.5s;
+    z-index: 1;
 }
 
-
-h1{
-    margin: 10px;
-    font-size: 40px;
+.card .poster img{
+    width: 100%;
 }
 
-p{
-    font-size: 20px;
-    margin: 20px;
-    visibility: hidden;
-    opacity: 0;
-}
-span{
-    font-weight: bold;
+.card:hover .poster::before{
+    bottom: 0px;
+    transition: 0.5s;
 }
 
-.card:hover{
-    cursor: pointer;
-
+.card:hover .poster img{
+transform: translateY(-50px);
+filter: blur(5px);
 }
 
-.card:hover .intro{
-    height: 220px;
-    bottom: 240px;
-    background: rgb(41, 40, 40);
+.card .details{
+    position: absolute;
+    width: 100%;
+    bottom: -185px;
+    left: 0;
+    z-index: 2;
+    padding: 20px;
+    transition: 0.5s;
 }
 
-
-.card:hover p{
-    opacity: 1;
-    visibility: visible;
+.card:hover .details{
+    bottom: 0;
 }
 
-.card:hover img{
-    transform: scale(1.1);
+.card .details h3, p{
+    font-size: 14px;
+}
+
+.card .details .rating{
+    position: relative;
+    padding: 5px 0;
+}
+.card .details .rating .fa-star{
+color: yellow;
+font-size: 16px;
+}
+.card .details .rating span{
+    color: black;
+}
+
+.card .details .tags{
+position: relative;
+margin-top: 5px;
+}
+
+.card .details .tags span{
+    padding: 2px 5px;
+    color: rgb(255, 253, 253);
+    background: rgba(100, 100, 187, 0.889);
+    border-radius: 4px;
+}
+
+.card .details .tags span:nth-child(2){
+    background: rgba(192, 74, 74, 0.921);
+}
+
+.card .details .info{
+    color: rgb(252, 246, 246);
+    margin-top: 20px;
+}
+
+.cast{
+    position: relative;
+}
+
+.cast h4{
+    color: black;
+}
+
+.cast ul{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.cast ul li{
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.cast ul li img{
+    max-width: 100%;
+}
+
+.card-container {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the width as needed */
+    gap: 20px; 
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #888;
+    background: rgba(128, 128, 128, 0.185);
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+  
+.tap {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tap button{
+    position: relative;
+    top: -20px;
+    width: 200px;
+    height: 60px;
+    margin-bottom: 60px; 
+border: none;
+border-radius: 25px;
+background: rgb(62, 194, 62);
+color: rgb(51, 131, 135);
+font-size: 17px;
+font-weight: 600;
+}
+.tap button:hover{
+   background: rgb(51, 131, 135);
+   color: rgb(62, 194, 62);
 }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Coming Soon - Rom-Com Central</h1>
-        <p>Get ready for these upcoming romantic comedies!</p>
+    <section class="header3">
         <nav>
-            <a href="index.html">Home</a>
-            <a href="films.html">Films</a>
-            <a href="coming_soon.html">Coming Soon</a>
-            <a href="about_us.html">About Us</a>
-            <a href="contact.html">Contact</a>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="films.html">Films</a></li>
+                    <li><a href="coming_soon.html">Coming Soon</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
-    </header>
-<div class="container">
-    <div class="card">
-        <img src="ddddd.webp" alt="">
-        <div class="intro">
-            <h1>It Ends with Us</h1>
-<p>
-    Lily grapples with the complexities of love, past trauma, and the reappearance of her first love. <br>Release date: February 9, 2024</p>        
-</div>
-    </div>
-    <div class="card">
-        <img src="MV5BMmY5N2ZlMjYtZTMwNC00ZTA4LWE4OWItMzNmMDE0N2I1OTI2XkEyXkFqcGdeQXVyNTMwOTA0OTA@._V1_.jpg" alt="">
-        <div class="intro">
-            <h1>Irish Wish</h1>
-            <p>May your troubles be less, and your blessings be more, and nothing but happiness come through your door. <br>Initial release: 2024</p>
+        <div class="text">
+            <h1>Coming Soon - Rom-Com Central</h1>
+            <p>Get ready for these upcoming romantic comedies!</p>
+            <hr>
         </div>
-    </div>
-    <div class="card">
-        <img src="anne-hathaway-looks-amazing-in-a-black-outfit-while-filming-a-scene-with-nicholas-galitzine-for-the-idea-of-you-in-savannah-georgia-201022_2.jpg" alt="">
-        <div class="intro">
-            <h1>The Idea of You</h1>
-            <p>An artist navigates the allure of a budding romance amidst the complications of her past. <br>Release date: May 2, 2024</p>
-        </div>
-    </div>
-   
-</div>
+    </section>
 
+<section class="card-container">
+<div class="card">
+<div class="poster">
+    <img src="card11.jpg" alt="">
+</div>
+<div class="details">
+    <h3>Directed By Peter Hutchings</h3>
+    <p>Release date: January 19, 2024</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+        <span>6.7/10</span>
+    </div>
+    <div class="tags">
+        <span>Drama</span>
+        <span>Romance</span>
+    </div>
+    <div class="info">
+        <p>Two romantic burnouts, Jane and Will, are immediately drawn to each other at a mutual friend's wedding. After a disastrous hook up in the coatroom, they spend the next 24 hours trading and heartbreaks on the off chance that this fling could be the real thing.</p>
+    </div>
+    <div class="cast">
+        <h4>Cast</h4>
+        <ul>
+            <li><img src="cast1.webp" alt=""></li>
+            <li><img src="e3.jpg" alt=""></li>
+            <li><img src="cast3.jpg" alt=""></li>
+            <li><img src="e2.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="card">
+    <div class="poster">
+        <img src="card22.jpg" alt="">
+    </div>
+    <div class="details">
+        <h3>Directed By Roger Kumble</h3>
+        <p>Release date: January 24, 2024</p>
+        <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+         
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>7/10</span>
+        </div>
+        <div class="tags">
+            <span>Comedy</span>
+            <span>Romance</span>
+        </div>
+        <div class="info">
+            <p>After a crazy night in Las Vegas, Abby and Travis wake up as accidental newlyweds, then travel to Mexico for an even wilder honeymoon. As chaos ensues, they must decide if they belong together, or if this marriage is a disaster waiting to happen.</p>
+        </div>
+        <div class="cast">
+            <h4>Cast</h4>
+            <ul>
+                <li><img src="q1.jpg" alt=""></li>
+                <li><img src="q2.jpg" alt=""></li>
+                <li><img src="w4.jpg" alt=""></li>
+                <li><img src="q4.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="card">
+        <div class="poster">
+            <img src="card33.jpg" alt="">
+        </div>
+        <div class="details">
+            <h3>Directed By 
+                Justin Baldoni</h3>
+                <p>Release date: 2024</p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <span>7/10</span>
+            </div>
+            <div class="tags">
+                <span>Drama</span>
+                <span>Romance</span>
+            </div>
+            <div class="info">
+                <p>Lily believes she's found true love with Ryle, but when a painful incident triggers past trauma, she must decide if love alone can carry her marriage through. However, things are complicated when her first love returns to her life.</p>
+            </div>
+            <div class="cast">
+                <h4>Cast</h4>
+                <ul>
+                    <li><img src="ww.jpg" alt=""></li>
+                    <li><img src="cast3.jpg" alt=""></li>
+                    <li><img src="w3.jpg" alt=""></li>
+                    <li><img src="w4.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="poster">
+                <img src="card55.jpg" alt="">
+            </div>
+            <div class="details">
+                <h3>Directed By  Will Gluck</h3>
+                <p>Release date: January 10, 2024</p>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span>8.5/10</span>
+                </div>
+                <div class="tags">
+                    <span>Comedy</span>
+                    <span>Romance</span>
+                </div>
+                <div class="info">
+                    <p>Despite an amazing first date, Bea and Ben's initial attraction quickly turns sour. However, when they unexpectedly find themselves at a destination wedding in Australia, they pretend to be the perfect couple to keep up appearances.
+                    </p>
+                </div>
+                <div class="cast">
+                    <h4>Cast</h4>
+                    <ul>
+                        <li><img src="e1.webp" alt=""></li>
+                        <li><img src="e2.jpg" alt=""></li>
+                        <li><img src="e3.jpg" alt=""></li>
+                        <li><img src="e4.webp" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+    </section>
+<section>
+    <div class="tap">
+        <button>Click for More</button>
+    </div>
+</section>
+    <section class="footer">
+        <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
+        <p>Designed with love</p>
+    </section>
+   
 </body>
 
 </html>

@@ -1,123 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - Rom-Com Central</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-  
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+    .navbar ul li a {
+      color: black;
+      background-color: #ffffff57;
+      border: 1px solid rgba(255, 255, 255, 0.326);
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-weight: 500;
     }
-    header {
-      background-color: #f7f7f7;
-      padding: 20px;
-      text-align: center;
+
+    .text h1 {
+      color: rgb(255, 0, 0);
+      font-size: 35px;
+      position: relative;
+      top: -50px;
+      background: rgba(255, 255, 255, 0.274);
     }
+
+    .header3 {
+      min-height: 100vh;
+      width: 100%;
+      background-color: rgb(184, 177, 177);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 50px;
+      /* background-image: url(ranger-4df6c1b6.png);
+            filter: brightness(80%); */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 140vh;
+    }
+
     nav {
       display: flex;
-      justify-content: center;
-      background-color: #e3e3e3;
-      padding: 10px;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a {
+
+    nav h1 {
+      font-size: 35px;
+      color: #fff;
+    }
+
+    .navbar {
+      flex: 1;
+      text-align: right;
+    }
+
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      color: #fff;
       text-decoration: none;
-      color: #333;
-      margin: 0 15px;
+      font-size: 18px;
     }
-    .contact-container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .contact-info {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-    .contact-info h2 {
-      margin-top: 0;
-    }
-    .contact-form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-    .contact-form label,
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
+
+    .navbar ul li::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background-color: aqua;
       display: block;
-      margin-bottom: 10px;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
+
+    button {
+      overflow: visible;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      color: #5A5A5A;
+      font: inherit;
+      margin: 0;
+    }
+
+    input {
+      line-height: normal;
+    }
+
+    textarea {
+      overflow: auto;
+    }
+
+    #container {
+      font-family: 'Montserrat', Arial, sans-serif;
+      border: solid 3px #f2efee;
+      background: #F2F3EB;
+      max-width: 400px;
+      margin: 60px auto;
+      position: relative;
+    }
+
+    form {
+      padding: 37.5px;
+      margin: 50px 0;
+    }
+
+    h1 {
+      color: #474544;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 7px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .underline {
+      border-bottom: solid 2px #474544;
+      margin: -14px auto;
+      width: 80px;
+    }
+
+    .email {
+      float: right;
+      width: 45%;
+    }
+
+    input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+      background: none;
+      border: none;
+      border-bottom: solid 2px #474544;
+      color: #474544;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 0px 0 30px 0;
+      padding: 0 0 14px 0;
+      text-transform: uppercase;
       width: 100%;
       box-sizing: border-box;
+      transition: 0.3s;
     }
-    .contact-form textarea {
-      resize: vertical;
+
+    input[type='text']:focus,
+    [type='email']:focus,
+    textarea:focus {
+      outline: none;
+      padding: 0 0 14px 0;
     }
-    .contact-form button {
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
+
+    .message {
+      float: none;
+    }
+
+    .name {
+      float: left;
+      width: 45%;
+    }
+
+    .telephone {
+      width: 100%;
+    }
+
+    textarea {
+      line-height: 150%;
+      height: 70px;
+      resize: none;
+      width: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #474544;
+    }
+
+    :-moz-placeholder {
+      color: #474544;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder {
+      color: #474544;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+      color: #474544;
+    }
+
+    #form_button {
+      background: none;
+      border: solid 2px #474544;
+      color: #474544;
       cursor: pointer;
+      display: inline-block;
+      font-family: 'Helvetica', Arial, sans-serif;
+      font-size: 0.875em;
+      font-weight: bold;
+      outline: none;
+      padding: 20px 35px;
+      text-transform: uppercase;
+      transition: 0.3s;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
+
+    #form_button:hover {
+      background: #474544;
+      color: #F2F3EB;
     }
+
+    @media screen and (max-width: 768px) {
+      #container {
+        margin: 20px auto;
+        width: 95%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .underline {
+        width: 68px;
+      }
+
+      #form_button {
+        padding: 15px 25px;
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      .underline {
+        width: 53px;
+      }
+
+      input[type='text'],
+      [type='email'],
+      select,
+      textarea {
+        font-size: 14px;
+      }
+    }
+
+    .flex-container {
+    display: flex;
+  }
+
+  #container,
+  .continfo {
+    flex: 1;
+  }
+
   </style>
 </head>
+
 <body>
-    <header>
-        <h1>Coming Soon - Rom-Com Central</h1>
-        <p>Get ready for these upcoming romantic comedies!</p>
-<nav>
-        <a href="index.html">Home</a>
-        <a href="films.html">Films</a>
-        <a href="coming_soon.html">Coming Soon</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact.html">Contact</a>
+  <section class="header3">
+    <nav>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="films.html">Films</a></li>
+          <li><a href="coming_soon.html">Coming Soon</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    </header>
-  </header>
-  
-  
-  <div class="contact-container">
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <p>If you have any inquiries or suggestions, feel free to reach out to us using the form below or through our contact details:</p>
-      <p>Email: info@romcomcentral.com</p>
-      <p>Phone: +1 234 567 890</p>
-      <p>Address: 123 Rom-Com Street, City, Country</p>
-    </div>
-    <div class="contact-form">
-      <h2>Send Us a Message</h2>
-      <form action="#" method="post">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
+    <div class="flex-container">
+    <div id="container">
+      <h1>Contact US</h1>
+      <div class="underline">
+      </div>
+      <form action="#" method="post" id="contact_form">
+        <div class="name">
+          <label for="name"></label>
+          <input type="text" placeholder=" Name" name="name" id="name_input" required>
+        </div>
+        <div class="email">
+          <label for="email"></label>
+          <input type="email" placeholder="E-mail" name="email" id="email_input" required>
+        </div>
+        <div class="telephone">
+          <label for="name"></label>
+          <input type="text" placeholder="Number" name="telephone" id="telephone_input" required>
+        </div>
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" placeholder="Leave Note" id="message_input" cols="30" rows="5" required></textarea>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Send Message" id="form_button" />
+        </div>
       </form>
     </div>
-  </div>
+    <div class="continfo">
+      <div class="contactInfo">
+        <div class="box">
+          <div class="icon"></div>
+          <div class="words">
+           <i class="fa-solid fa-map-pin"></i>
+            <h3>Address</h3>
+            <p>4288 123 Sugar Camp Street, Minnesota</p>
+            
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"></div>
+          <div class="words">
+           <i class="fa-solid fa-phone"></i> 
+           <h3>Phone</h3>
+            <p>+1 234 567 890</p>
+            
+          </div>
+          <div class="box">
+            <div class="icon"></div>
+            <div class="words">
+              <i class="fa-solid fa-envelope"></i>
+              <h3>Email</h3>
+              <p>info@romcomcentral.com</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </section>
 
-  <footer>
-    <p>&copy; 2024 Rom-Com Central. All rights reserved.</p>
-  </footer>
 </body>
+
 </html>
