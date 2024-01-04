@@ -4,85 +4,86 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - Rom-Com Central</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-    .navbar ul li a {
-      color: black;
-      background-color: #ffffff57;
-      border: 1px solid rgba(255, 255, 255, 0.326);
-      border-radius: 10px;
-      padding: 5px 10px;
-      font-weight: 500;
+    header {
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 100px;
+      transition: 0.5s;
+      background: rgba(174, 173, 173, 0.603);
     }
 
-    .text h1 {
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      align-items: center;
+      column-gap: 0.5rem;
+      text-decoration: none;
       color: rgb(255, 0, 0);
-      font-size: 35px;
       position: relative;
-      top: -50px;
-      background: rgba(255, 255, 255, 0.274);
+      left: 80px;
+    }
+
+    .bx {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .navbar2 {
+      display: flex;
+      column-gap: 5rem;
+    }
+
+    .navbar2 li {
+      position: relative;
+      list-style: none;
+      left: -200px;
+    }
+
+    .navbar2 a {
+      font-size: 17px;
+      font-weight: 500;
+      color: black;
+      text-decoration: none;
+    }
+
+    .navbar2 a::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      background: aqua;
+      bottom: -4px;
+      left: 0;
+      transition: 0.3s all linear;
+    }
+
+    .navbar2 a:hover:after,
+    .navbar2 .home-active::after {
+      width: 100%;
     }
 
     .header3 {
       min-height: 100vh;
       width: 100%;
-      background-color: rgb(184, 177, 177);
+      background-color: rgb(255, 255, 255);
       background-position: center;
       background-size: cover;
       position: relative;
       font-family: 'Montserrat', sans-serif;
       margin-bottom: 50px;
-      /* background-image: url(ranger-4df6c1b6.png);
-            filter: brightness(80%); */
       background-size: cover;
       background-repeat: no-repeat;
-      height: 140vh;
-    }
-
-    nav {
-      display: flex;
-      padding: 2% 6%;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav h1 {
-      font-size: 35px;
-      color: #fff;
-    }
-
-    .navbar {
-      flex: 1;
-      text-align: right;
-    }
-
-    .navbar ul li {
-      list-style: none;
-      display: inline-block;
-      padding: 8px 12px;
-      position: relative;
-    }
-
-    .navbar ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .navbar ul li::after {
-      content: '';
-      width: 0%;
-      height: 2px;
-      background-color: aqua;
-      display: block;
-      margin: auto;
-      transition: 0.5s;
-    }
-
-    .navbar ul li:hover::after {
-      width: 100%;
+      height: 100vh;
     }
 
     button {
@@ -114,10 +115,11 @@
     #container {
       font-family: 'Montserrat', Arial, sans-serif;
       border: solid 3px #f2efee;
-      background: #F2F3EB;
+      background: #ffffff;
       max-width: 400px;
       margin: 60px auto;
       position: relative;
+      top: 100px;
     }
 
     form {
@@ -267,90 +269,303 @@
       }
     }
 
-    .flex-container {
-    display: flex;
-  }
 
-  #container,
-  .continfo {
-    flex: 1;
-  }
+    @media(max-width: 700px) {
+ .flex-container {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ #container,
+ .continfo {
+   max-width: 100%;
+ }
+
+ .continfo {
+   margin: 20px;
+   max-width: 90%;
+   position: static;
+   top: 0;
+ }
+
+ .header3 {
+   height: auto;
+ }
+
+ .logo {
+   left: -50px;
+ }
+
+ .navbar2 {
+   column-gap: 2rem;
+ }
+
+ .navbar2 li {
+   left: -30px;
+ }
+
+ h1 {
+   font-size: 26px;
+ }
+
+ .underline {
+   width: 68px;
+ }
+
+ #form_button {
+   padding: 15px 25px;
+ }
+
+ .name,
+ .email,
+ .telephone {
+   width: 100%;
+ }
+
+ .message {
+   width: 100%;
+ }
+
+ input[type='text'],
+ [type='email'],
+ select,
+ textarea {
+   font-size: 14px;
+ }
+
+ textarea {
+   height: 70px;
+ }
+ 
+}
+
+    .flex-container {
+      display: flex;
+    }
+
+    #container,
+    .continfo {
+      flex: 1;
+    }
+
+
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    #container {
+      flex: 1;
+      margin: 20px;
+      max-width: 40%;
+    }
+
+    .continfo {
+      max-width: 40%;
+      position: relative;
+      top: 390px;
+      left: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #container,
+      .continfo {
+        max-width: 100%;
+      }
+
+      .continfo {
+        margin: 20px;
+        max-width: 90%;
+        position: static;
+        top: 0;
+      }
+
+      .continfo .box{
+        margin-top: 40px;
+      }
+    }
+
+    .footer {
+      padding: 20px 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #888;
+      background: rgba(128, 128, 128, 0.185);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-content p {
+      margin: 5px 0;
+    }
+
+    @media(max-width: 480px) {
+ header {
+ padding: 15px 20px;
+ }
+
+ .navbar2 {
+ column-gap: 2rem;
+ }
+
+ .header3 {
+ height: auto;
+ }
+
+ .logo {
+ left: 0px;
+ }
+
+ .navbar2 {
+ column-gap: 2rem;
+ }
+
+ .navbar2 li {
+ left: 0px;
+ }
+
+ h1 {
+ font-size: 26px;
+ }
+
+ .underline {
+ width: 68px;
+ }
+
+ #form_button {
+ padding: 15px 25px;
+ }
+
+ .name,
+ .email,
+ .telephone {
+ width: 100%;
+ }
+
+ .message {
+ width: 100%;
+ }
+
+ input[type='text'],
+ [type='email'],
+ select,
+ textarea {
+ font-size: 14px;
+ }
+
+ textarea {
+ height: 70px;
+ }
+
+ .flex-container {
+ flex-direction: column;
+ align-items: center;
+ }
+
+ #container,
+ .continfo {
+ max-width: 100%;
+ }
+
+ .continfo {
+ margin: 20px;
+ max-width: 90%;
+ position: static;
+ top: 0;
+ }
+}
 
   </style>
 </head>
 
 <body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-film"></i> rOmcOms
+    </a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar2">
+      <li><a href="index.html" class="home-active">Home</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="coming_soon.html">Coming Soon</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
   <section class="header3">
-    <nav>
-      <div class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="films.html">Films</a></li>
-          <li><a href="coming_soon.html">Coming Soon</a></li>
-          <li><a href="about_us.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <div class="flex-container">
-    <div id="container">
-      <h1>Contact US</h1>
-      <div class="underline">
-      </div>
-      <form action="#" method="post" id="contact_form">
-        <div class="name">
-          <label for="name"></label>
-          <input type="text" placeholder=" Name" name="name" id="name_input" required>
+      <div id="container">
+        <h1>Contact US</h1>
+        <div class="underline">
         </div>
-        <div class="email">
-          <label for="email"></label>
-          <input type="email" placeholder="E-mail" name="email" id="email_input" required>
-        </div>
-        <div class="telephone">
-          <label for="name"></label>
-          <input type="text" placeholder="Number" name="telephone" id="telephone_input" required>
-        </div>
-        <div class="message">
-          <label for="message"></label>
-          <textarea name="message" placeholder="Leave Note" id="message_input" cols="30" rows="5" required></textarea>
-        </div>
-        <div class="submit">
-          <input type="submit" value="Send Message" id="form_button" />
-        </div>
-      </form>
-    </div>
-    <div class="continfo">
-      <div class="contactInfo">
-        <div class="box">
-          <div class="icon"></div>
-          <div class="words">
-           <i class="fa-solid fa-map-pin"></i>
-            <h3>Address</h3>
-            <p>4288 123 Sugar Camp Street, Minnesota</p>
-            
+        <form action="#" method="post" id="contact_form">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder=" Name" name="name" id="name_input" required>
           </div>
-        </div>
-        <div class="box">
-          <div class="icon"></div>
-          <div class="words">
-           <i class="fa-solid fa-phone"></i> 
-           <h3>Phone</h3>
-            <p>+1 234 567 890</p>
-            
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="E-mail" name="email" id="email_input" required>
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="Number" name="telephone" id="telephone_input" required>
+          </div>
+          <div class="message">
+            <label for="message"></label>
+            <textarea name="message" placeholder="Leave Note" id="message_input" cols="30" rows="5" required></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Send Message" id="form_button" />
+          </div>
+        </form>
+      </div>
+      <div class="continfo">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon"></div>
+            <div class="words">
+              <h3>Address <i class="fa-solid fa-map-pin"></i></h3>
+              <p>4288 123 Sugar Camp Street, Minnesota</p>
+
+            </div>
           </div>
           <div class="box">
             <div class="icon"></div>
             <div class="words">
-              <i class="fa-solid fa-envelope"></i>
-              <h3>Email</h3>
-              <p>info@romcomcentral.com</p>
+
+              <h3>Phone <i class="fa-solid fa-phone"></i> </h3>
+              <p>+1 234 567 890</p>
+
             </div>
+            <div class="box">
+              <div class="icon"></div>
+              <div class="words">
+                <h3>Email <i class="fa-solid fa-envelope"></i></h3>
+                <p>info@romcomcentral.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-</div>
   </section>
-
+  <section class="footer">
+    <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
+    <p>Designed with love</p>
+  </section>
 </body>
 
 </html>
