@@ -198,6 +198,8 @@
 
  .btn {
      padding: 5px 5px;
+     width: 100px;
+     height: 40px;
  }
 
  .footer {
@@ -262,6 +264,19 @@
  }
 }
 
+@media only screen and (max-width: 640px) {
+  .about {
+     grid-template-columns: 1fr;
+  }
+
+.about-text{
+display: grid;
+ grid-template-columns: auto auto;
+}
+
+}
+
+
 
   </style>
 </head>
@@ -309,7 +324,7 @@
   </section>
   <section class="footer">
     <p>Rom-Com Reels &copy; 2023. All Rights Reserved.</p>
-    <p>Designed with love by YourName</p>
+    <p>Designed with love</p>
   </section>
 </body>
 
