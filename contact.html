@@ -358,7 +358,7 @@
       text-align: center;
       font-family: Arial, sans-serif;
       color: #888;
-      background: rgba(128, 128, 128, 0.185);
+      background: rgba(212, 212, 212, 0.155);
     }
 
     .footer-content {
@@ -452,6 +452,42 @@
  top: 0;
  }
 }
+
+@media (min-width: 1280px) {
+  header {
+    padding: 15px 100px;
+  }
+
+  .flex-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  #container,
+  .continfo {
+    max-width: 45%;
+  }
+
+  .continfo {
+    top: 350px;
+    left: 150px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-content p {
+    margin: 0;
+  }
+}
+
 
   </style>
 </head>
