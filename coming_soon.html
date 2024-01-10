@@ -429,13 +429,21 @@
     .text {
         width: 60%;
     }
-
+  
     .card-container {
         margin-top: 150px;
         margin-bottom: 100px;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 
+    .card {
+        flex: 1 0 320px;
+        max-width: 320px;
+    }
+    
     .footer {
         margin-top: 40px;
         padding: 20px 0;
