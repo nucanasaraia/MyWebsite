@@ -347,10 +347,6 @@ nav i {
   grid-template-columns: repeat(10, 1fr);
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar {
-  display: none;
-}
-
 .slider-wrapper .image-list .image-item {
   width: 200px;
   height: 300px;
@@ -370,48 +366,6 @@ nav i {
   width: 95%;
   overflow: hidden;
 }
-
-.scrollcard .slider-scrollbar {
-  height: 24px;
-  width: 100%;
-}
-
-.slider-scrollbar .scrollbar-track {
-  height: 2px;
-  width: 100%;
-  background: #ccc;
-  position: relative;
-  border-radius: 4px;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-  height: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background: #514848;
-  border-radius: inherit;
-  cursor: grab;
-}
-
-.slider-scrollbar .scrollbar-thumb:active {
-  cursor: grabbing;
-  height: 8px;
-  top: -2px;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-}
-
 
 .image-list {
   display: flex;
